@@ -39,18 +39,25 @@
                 }
             
             
+    @media (min-width:1px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+   }  
    @media (min-width:400px) {
             .container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                @media (min-width:700px){
+            }
+   }
+                
+    @media (min-width:700px){
                     .container{
                         display: grid;
                         grid-template-columns:1fr 1fr 1fr;
                     }
                 }
-            }
-            }
            
         </Style>
     </head>
