@@ -1,8 +1,53 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Hello! This is Erica Chin</title>
-        <Style>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <title>Erica Chin</title>
+        
+    <style>
+              .headshot {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .profile1,
+        .profile2 {
+            background-color: blueviolet;
+            margin: 2px;
+        }
+        
+        @media (min-width: 600px) {
+            #begin {
+                display: grid;
+                grid-template-columns: "2fr 1fr";
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "hs p1"
+                "hs p2";
+            }
+
+        @media (min-width: 800px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "p1 hs p2";
+            }
+            .headshot {
+                grid-area: hs;
+            }
+            .profile1 {
+                grid-area: p1;
+            }
+            .profile2 {
+                grid-area: p2;
+            }
+        }
             
         body {
             font-size: 24px;
@@ -25,7 +70,6 @@
             padding: 0.5em;
         }
            
-        
         #space {
             margin: 5em;
         }
@@ -36,15 +80,8 @@
             background-color: antiquewhite;
             border: lightblue 1px solid;
             margin: 5px;
-                }
-            
-            
-    @media (min-width:1px) {
-            .container {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-   }  
+                } 
+
    @media (min-width:400px) {
             .container {
                 display: grid;
@@ -58,12 +95,19 @@
                         grid-template-columns:1fr 1fr 1fr;
                     }
                 }
-           
-        </Style>
-    </head>
+    </style>
+</head>
 
     <body>
-        <h1> Erica's demo portfolio</h1>
+        <h1 class="animated bounce"> Erica's demo portfolio</h1>
+            <div id="begin">
+                    <div class="headshot">headshot</div>
+                    <div class="profile1">profile 1</div>
+                    <div class="profile2">profile 2</div>
+                </div>
+                
+        
+        
         <div id="space"></div>
         
         <h2>Album</h2>
@@ -85,7 +129,7 @@
             </li></ul>
         <h2>Long paragraphs</h2>
         <p>long long long long</p>
-        
-            
     </body>
+            
+          
 </html>
