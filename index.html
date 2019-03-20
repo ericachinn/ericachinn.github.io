@@ -1,25 +1,90 @@
 <html>
     <head>
+            <title>Erica Chin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <title>Erica Chin</title>
-        
+         <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         
     <style>
-              .headshot {
+    .sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(43, 43, 43);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight:bold;
+  color:white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: rgb(255, 217, 0);
+}
+
+.main {
+  margin-left: 100px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+        body {
+            font-family: 'Lato';font-size: 15px; font-weight: normal;
+            background-color:rgb(43, 43, 43);
+}
+         /*.headshot {
             background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/%E9%8C%A2%E7%9A%93%E6%A5%A0.jpg);
-            background-size: contain;
-            width: 200px;
-            height: 200px;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin-left: auto;
             margin-right: auto;
-        }
+        }*/
         
-        .profile1,
-        .profile2 {
-            background-color: blueviolet;
-            margin: 2px;
-        }
+        mark{
+            background-color:rgb(255, 217, 0);
+            color: rgb(43,43,43);
+        }    
+
+        .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/IMG_0855.JPG);
+  height: 50%;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.p {
+
+}
         
         @media (min-width: 600px) {
             #begin {
@@ -49,31 +114,27 @@
                 grid-area: p2;
             }
         }
-            
-        body {
-            font-size: 14px;
-        }
-        
-        h2 {
-            text-align: center;
-            color: rgb(138, 116, 88)
-        }
-        
-        h1 {
-            color: rgb(255, 255, 255);
-            font-size: 18px;
+
+        /*h1 {
+            font-family: 'Source Sans Pro';font-size: 22px; font-weight: normal;
+            color: rgb(0, 0, 0);
+            font-size: 42px;
+            font-weight:bolder;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgb(138, 116, 88);
             margin: 0;
             text-align: center;
-            padding: 0.5em;
+            padding: 0em;
+        }*/
+
+        h2 {
+            text-align: left;
+            color: white;
+            font-size: 20px;
+            margin-left: 5px;
         }
-           
-        #space {
-            margin: 5em;
-        }
+
         
     .photo {
             min-width: 100px;
@@ -82,14 +143,16 @@
             margin: 5px;
                 } 
 
-     .photo {
+     .photo1 {
             min-width: 100px;
             min-height: 100px;
-            background: image src="images/IMG_0898.JPG";
+            background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/IMG_0855.JPG);
+            background-size:cover;
+            background-position:center;
             margin: 5px;
                 } 
 
-   @media (min-width:400px) {
+   @media (min-width:100px) {
             .container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -106,34 +169,33 @@
 </head>
 
     <body>
-        <div class="card">
-        </div>
+            <div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#clients">Hire me</a>
+  <a href="#contact">Contact</a>
+</div>
 
-        <div class ="headshot">
-        </div>
+<div class="main">
+        <div class="animated pulse hero-image">
+        <div class="hero-text">
+        <h1 style="font-size:30px; class="animated pulse"">Erica Chin | 錢皓楠</h1>
+    <p style="font-size:20px;font-weight:bold; text-align:left;"><mark>Visual story teller</mark></p>
+  </div>
+</div>
 
-        <h2>About me</h2>
-        <p> Hello! I am an International Journalism student from HKBU</p>
-
-        <h2>Photography</h2>
+        <h2>  Photography </h2>
         <div class="container">
-         <div class="photo1"></image>
-         </div>
-         <div class="photo">Photo</div>
+         <div class="photo1"></div>
+         <div class="photo1">Photo</div>
          <div class="photo">Photo</div>
          <div class="photo">Photo</div>
          <div class="photo">Photo</div>
          <div class="photo">Photo</div>
     </div>
-        
-        
+    </div>
        
-        <h2>Videography</h2>
       
-            <div id="begin">
-                    <div class="profile1">profile 1</div>
-                    <div class="profile2">profile 2</div>
-                </div>
+            
     </body>
             
           
