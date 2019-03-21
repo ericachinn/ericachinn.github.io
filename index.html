@@ -6,47 +6,125 @@
          <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
          <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
-    .sidenav {
-  height: 100%;
-  width: 100px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(43, 43, 43);
-  overflow-x: hidden;
-  padding-top: 20px;
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
   font-weight:bold;
-  color:white;
-  display: block;
 }
 
-.sidenav a:hover {
+.topnav a:hover {
   color: rgb(255, 217, 0);
 }
 
-.main {
-  margin-left: 100px; /* Same as the width of the sidenav */
-  font-size: 18px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: rgb(255, 217, 0);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(255, 217, 0);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*.topnav a.active {
+  background-color: rgb(255, 217, 0);
+  color: rgb(43,43,43);
+}*/
         body {
             font-family: 'Lato';font-size: 15px; font-weight: normal;
-            background-color:rgb(43, 43, 43);
+            background-color:rgb(43,43,43);
 }
          /*.headshot {
             background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/%E9%8C%A2%E7%9A%93%E6%A5%A0.jpg);
@@ -169,31 +247,77 @@
 </head>
 
     <body>
-            <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#clients">Hire me</a>
+
+            <div class="topnav">
+            <a href="#home">Erica Chin | 錢皓楠</a>
+  <a href="#news">About</a>
   <a href="#contact">Contact</a>
 </div>
+<div class="slideshow-container">
 
-<div class="main">
-        <div class="animated pulse hero-image">
-        <div class="hero-text">
-        <h1 style="font-size:30px; class="animated pulse"">Erica Chin | 錢皓楠</h1>
-    <p style="font-size:20px;font-weight:bold; text-align:left;"><mark>Visual story teller</mark></p>
-  </div>
+
+        <div class="mySlides fade">
+  <img src="images/DSC01514.jpg" style="width:100%">
+  <div class="text"></div>
 </div>
 
-        <h2>  Photography </h2>
-        <div class="container">
-         <div class="photo">Photo</div>
-         <div class="photo">Photo</div>
-         <div class="photo">Photo</div>
-         <div class="photo">Photo</div>
-         <div class="photo">Photo</div>
-         <div class="photo">Photo</div>
-    </div>
-    </div>
-       
+
+<div class="mySlides fade">
+  <img src="images/IMG_0855.JPG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/IMG_0890.JPG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/IMG_0898.JPG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+    
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>      
       
             
     </body>
