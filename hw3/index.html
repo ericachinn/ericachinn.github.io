@@ -1,7 +1,36 @@
 <html>
     <head>
-    
+    <title>How many sexual violence cases were reported in your district in 2018?</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
         <style>
+
+        body {
+            font-family: 'Lato';
+            font-size: 15px;
+            font-weight: normal;
+            background-color:rgb(255, 196, 0);
+            color:rgb(43,43,43);
+    }
+
+    mark{
+        color:rgb(255, 196, 0);
+        background-color:rgb(43,43,43);
+        font-size:40px;
+        border-radius: 5px;
+    }
+
+    button{
+        background-color:rgb(43,43,43);
+        color:rgb(255, 196, 0);
+        border-radius: 5px;
+    }
+
+    button:hover{
+        background-color:rgb(20, 20, 20);
+        color:rgb(219, 169, 2);
+        border-radius: 5px;
+    }
+
 
         </style>
     </head>
@@ -31,11 +60,14 @@
         <button id="Tuen Mun"> Tuen Mun</button>
         <br>
         <br>
+        <br>
         <div>
-            <span id="result"></span>
-            <p>sexual violence cases were reported in your district in 2018.</p>
-
+            <mark><span id="result"></span></mark>
         </div>
+        <br>
+        <br>
+            <a href = 'https://www.swd.gov.hk/vs/english/stat.html'> Source: Social Welfare Department</a>
+        
     </body>
 
 <script>
