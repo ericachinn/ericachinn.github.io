@@ -1,1 +1,133 @@
+<html>
+    <head>
+        <style>
 
+        </style>
+    </head>
+
+    <body data loaded="true">
+        <h1>How many sexual violence cases were reported in your district in 2018?</h1>
+        <br>
+        <h2>Where do you live?</h2>
+        <br>
+        <button class="ui button active"; id="Central & Western" onclick ="displayCase(this)"> Central & Western</button>
+        <button id="Southern"> Southern</button>
+        <button id="Island"> Island</button>
+        <button id="Eastern"> Eastern</button>
+        <button id="Wan Chai"> Wan Chai</button>
+        <button id="Kowloon City"> Kowloon City</button>
+        <button id="Yau Tsim Mong"> Yau Tsim Mong</button>
+        <button id="Sham Shui Po"> Sham Shui Po</button>
+        <button id="Wong Tai Sin"> Wong Tai Sin</button>
+        <button id="Sai Kung"> Sai Kung</button>
+        <button id="Kwun Tong"> Kwun Tong</button>
+        <button id="Shatin"> Shatin</button>
+        <button id="Tai Po"> Tai Po</button>
+        <button id="North"> North</button>
+        <button id="Yuen Long"> Yuen Long</button>
+        <button id="Tsuen Wan"> Tsuen Wan</button>
+        <button id="Kwai Tsing"> Kwai Tsing</button>
+        <button id="Tuen Mun"> Tuen Mun</button>
+        <br>
+        <br>
+        <div>
+            <span id="result"></span>
+            <p>sexual violence cases were reported in your district in 2018.</p>
+
+        </div>
+    </body>
+
+    <script>
+    document.getElementById("Central & Western").onclick = displayCW;
+
+    function displayCW(id) {
+        document.getElementById("result").innerHTML = "110 (10.8%)";
+    }
+    document.getElementById("Southern").onclick = displaySou;
+
+    function displaySou(id) {
+        document.getElementById("result").innerHTML = "19 (1.9%)";
+    }
+    document.getElementById("Island").onclick = displayIsl;
+
+    function displayIsl(id) {
+        document.getElementById("result").innerHTML = "25 (2.5%)";
+    }
+    document.getElementById("Eastern").onclick = displayEas;
+
+    function displayEas(id) {
+        document.getElementById("result").innerHTML = "49 (4.8%)";
+    }
+    document.getElementById("Wan Chai").onclick = displayWan;
+
+    function displayWan(id) {
+    document.getElementById("result").innerHTML = "58 (5.7%)";
+    }
+    document.getElementById("Kowloon City").onclick = displayKow;
+
+    function displayKow(id) {
+    document.getElementById("result").innerHTML = "66 (6.5%)";
+    }
+    document.getElementById("Yau Tsim Mong").onclick = displayYau;
+
+    function displayYau(id) {
+    document.getElementById("result").innerHTML = "163 (16.0%)";
+    }
+    document.getElementById("Sham Shui Po").onclick = displaySha;
+
+    function displaySha(id) {
+    document.getElementById("result").innerHTML = "54 (5.3%)";
+    }
+    document.getElementById("Wong Tai Sin").onclick = displayWon;
+
+    function displayWon(id) {
+    document.getElementById("result").innerHTML = "32 (3.1%)";
+    }
+    document.getElementById("Sai Kung").onclick = displaySai;
+
+    function displaySai(id) {
+    document.getElementById("result").innerHTML = "20 (2.0%)";
+    }
+    document.getElementById("Kwun Tong").onclick = displayKwu;
+
+    function displayKwu(id) {
+    document.getElementById("result").innerHTML = "65 (6.4%)";
+    }
+    document.getElementById("Shatin").onclick = displaySha;
+
+    function displaySha(id) {
+    document.getElementById("result").innerHTML = "46 (4.5%)";
+    }
+    document.getElementById("Tai Po").onclick = displayTai;
+
+    function displayTai(id) {
+    document.getElementById("result").innerHTML = "28 (2.7%)";
+    }
+    document.getElementById("North").onclick = displayNor;
+
+    function displayNor(id) {
+    document.getElementById("result").innerHTML = "26 (2.5%)";
+    }
+    document.getElementById("Yuen Long").onclick = displayYue;
+
+    function displayYue(id) {
+    document.getElementById("result").innerHTML = "66 (6.5%)";
+    }
+    document.getElementById("Tsuen Wan").onclick = displayTsu;
+
+    function displayTsu(id) {
+    document.getElementById("result").innerHTML = "38 (3.7%)";
+    }
+    document.getElementById("Kwai Tsing").onclick = displayKwa;
+
+    function displayKwa(id) {
+    document.getElementById("result").innerHTML = "54 (5.3%)";
+    }
+    document.getElementById("Tuen Mun").onclick = displayTue;
+
+    function displayTue(id) {
+    document.getElementById("result").innerHTML = "39 (3.8%)";
+    }
+    </script>
+
+</html>
