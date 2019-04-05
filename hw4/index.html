@@ -2,6 +2,7 @@
     <head>
         <title>Criticise the Visuals</title>
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 font-family: 'Lato';
@@ -26,64 +27,161 @@
             right: 1em;
             color: rgb(39, 39, 39);
             text-align: left;
-            font-size: 250%;
+            font-size: 4vw;
             font-style: bold;
         }
 
+        figcaption{
+            font-size: 12px;
+        }
 
-            h1{
+        video{
+            position: relative;
+        }
+
+        li{
+            
+        }
+        h1{
                 font-size: 30px;
-            }
+        }
+
+        .item1{grid-area: header;}
+        .item2{grid-area: left;}
+        .item3{grid-area: main;
+        width:100%;}
+        .item4{grid-area: right;}
+        .item5{grid-area: footer;}
 
             @media (min-width:100px) {
             .container {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-areas:'header header header'
+                'left main right'
+                'footer footer footer' ;
+                padding: 10px;
             }
                 }
                 
-             @media (min-width:700px){
-                    .container{
-                        display: grid;
-                        grid-template-columns:1fr 1fr 1fr;
-                    }
+                @media (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-areas:'header header header header header'
+                'left left main right right'
+                'footer footer footer footer footer' ;
+                padding: 10px;
+            }
                 }
+
+                #mychart {
+    min-width: 360px;
+    max-width: 500px;
+    margin: 0 auto;
+}
         </style>
     </head>
 
     <body>
+            <div class="container">
+        <div class="item1">  
         <cover-image>
             <img src="images/SCMP_header.png" alt="coverphoto" style="max-width:100%">
-        <h1>Criticise the Visuals: An analysis of "How every Boeing 737 MAX was grounded in five days"</h1>
+        <h1>Criticise the Visuals: <br> How every Boeing 737 MAX was grounded in five days</h1>
         </cover-image>
+    </div>
+
+        
+            
+            <div class="item2">  </div>
+            <div class="item4">  </div>
+            <div class="item5">  </div>
+            <div class="item3">
         <h2>Background</h2>
-        <p>This is a story by Pablo Robles from the SCMP, published on 1 April, about how the plane model Boeing 737 Max was grounded by all countries after two crashes of said model in five months. The author illustrated why, when, and where the aircrafts were grounded by utilising various visulisations.</p>
+        <a href="https://multimedia.scmp.com/news/world/article/3003901/boeing-737-grounded/index.html" >Link to original story</a>
+        <p>This is a story by Pablo Robles from the SCMP. Published on 1 April, the story is about how the plane model Boeing 737 Max was grounded by all countries after two crashes of said model in five months. The author illustrated why, when, and where the aircrafts were grounded by utilising various visulisations.</p>
         <p>In this analysis, I would like to focus on the timeline the author used to depict the chronology.</p>
         <h2>Pros</h2>
         <ol>
         <li>Mobile friendly</li>
-        <video width="200" height="420" controls>
+        <video width="200" height="420" controls >
                 <source src="videos/SCMP_375.mp4" type="video/mp4">
                 <source src="videos/SCMP_375.ogg" type="video/ogg">
               Your browser does not support the video tag.
               </video>
-              <p>This is how the story reads like on an iPhone X</p>
-              <p>The dimension, verticle</p>
+              <figcaption>This is how the story reads like on an iPhone X, with the dimension of 375 x 812.</figcaption>
+              <p>First, the timeline is easily readable on both computer screens and phone screens. Second, the timeline is vertical, which is more mobile-friendly than a horizontal timeline because people are used to scrolling down their phones instead of scrolling sideways.</p>
         <li>Shows clear chronological order of the days</li>
+              <p>The timeline shows clearly the day and time of the events, with exact time.</p>
         </ol>
         <h2>Cons</h2>
         <ol>
         <li>Takes too long to scroll</li>
-        <p>Scattered</p>
+        <p>The timeline, in my opinion, requires too much scrolling to inform readers the chronology of the grounding of flights.</p>
         </ol>
 
         <h2>My take</h2>
+        <p>I would like to keep the pros which I have mentioned above:
+            <li>Mobile friendly</li>
+            <li>Shows clear chronological order of the days</li>
+            <br>
+            while also improving the cons:
+            <br>
+            <br>
+            <li>Takes too long to scroll</li>
+            <br>
+            This is my attempt:
+        </p>
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/timeline.js"></script>
+                
+                <div id="mychart"></div>
+    
+    <p>I would like to add that this is a very simplified version of my attempt to improve the timeline. Details from the original timeline, for example, the map of Ethopia for the first event, the bubbles which indicates how many planes were grounded should be preserved.</p>
+</div>
 
-        <div id="mychart">
-            My chart will appear here
-        </div>
     </body>
 
-    <script></script>
+    <script>
+    Highcharts.chart('mychart', {
+    chart: {
+        type: 'timeline',
+        inverted: true
+    },
+    title: {
+        text: 'Timeline of the grounding of Boeing MAX 737'
+    },
+    subtitle: {
+        text: 'Source: <a href="https://multimedia.scmp.com/news/world/article/3003901/boeing-737-grounded/index.html">SCMP</a>'
+    },
+    xAxis: {
+        visible: false
+    },
+    yAxis: {
+        visible: false
+    },
+    series: [{
+        data: [{
+            name: 'Mar 10: The trigger',
+            label: 'Crash of Ethiopian flight 302',
+            description: 'The aircraft took off in Addis Ababa at 8:38am. Signals of the flight was lost six minutes after take off.'
+        }, {
+            name: 'Day1: Mar 11',
+            label: '115 planes grounded',
+            description: '96 in China, 2 from Cayman Airlines, 1 from MIAT Mongolian, 4 from Ethiopian Airlines, 1 from Royal Air Maroc, 11 from Garuda Indonesia Lion Air'
+        }, {
+            name: 'Day2: Mar 12',
+            label: '84 planes grounded',
+            description: ''
+        }, {
+            name: 'Day3: Mar 13',
+            label: '88 planes grounded',
+            description: ''
+        },{
+            name: 'Day4: Mar 14',
+            label: '59 planes grounded',
+            description: ''
+        }]
+    }]
+});</script>
 
 </html>
