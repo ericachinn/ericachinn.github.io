@@ -14,9 +14,22 @@
             cover-image {
             display: block;
             position: relative;
-            
             opacity: 0.9;
+            max-width:100%;
+        
         }
+
+        cover-image h1 {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            right: 1em;
+            color: rgb(39, 39, 39);
+            text-align: left;
+            font-size: 250%;
+            font-style: bold;
+        }
+
 
             h1{
                 font-size: 30px;
@@ -40,12 +53,12 @@
 
     <body>
         <cover-image>
-            <img src="images/SCMP_header.png" alt="cover photo">
-      
-        <h1>Criticise the Visuals: An anlysis of "How every Boeing 737 MAX was grounded in five days"</h1>
+            <img src="images/SCMP_header.png" alt="coverphoto" style="max-width:100%">
+        <h1>Criticise the Visuals: An analysis of "How every Boeing 737 MAX was grounded in five days"</h1>
         </cover-image>
         <h2>Background</h2>
-        <p>This is a story from SCMP about......</p>
+        <p>This is a story by Pablo Robles from the SCMP, published on 1 April, about how the plane model Boeing 737 Max was grounded by all countries after two crashes of said model in five months. The author illustrated why, when, and where the aircrafts were grounded by utilising various visulisations.</p>
+        <p>In this analysis, I would like to focus on the timeline the author used to depict the chronology.</p>
         <h2>Pros</h2>
         <ol>
         <li>Mobile friendly</li>
@@ -54,16 +67,21 @@
                 <source src="videos/SCMP_375.ogg" type="video/ogg">
               Your browser does not support the video tag.
               </video>
-              <p>What it looks like to read the story on an iPhone XP</p>
-        <li> </li>
+              <p>This is how the story reads like on an iPhone X</p>
+              <p>The dimension, verticle</p>
+        <li>Shows clear chronological order of the days</li>
         </ol>
         <h2>Cons</h2>
         <ol>
         <li>Takes too long to scroll</li>
-        <li></li>
+        <p>Scattered</p>
         </ol>
 
         <h2>My take</h2>
+
+        <div id="mychart">
+            My chart will appear here
+        </div>
     </body>
 
     <script></script>
