@@ -8,21 +8,8 @@
         cover-image {
             display: block;
             position: relative;
-            opacity: 0.9;
             max-width:100%;
         
-        }
-
-        cover-image h1 {
-            font-family: 'Merriweather';
-            position: absolute;
-            bottom: 1em;
-            left: 1em;
-            right: 1em;
-            color: rgb(39, 39, 39);
-            text-align: left;
-            font-size: 50px;
-            font-style: bold;
         }
         
         body{
@@ -65,13 +52,13 @@
 
         figcaption{
             font-family: 'Roboto';
-            font-size:12px;
+            font-size:1px;
             font-weight: normal;
             color:rgb(114, 114, 114) 
         }
 
         .main{
-            position:center;
+            position:absolute;
         }
 
         .embed-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; max-width: 100%; height: auto; }
@@ -81,7 +68,7 @@
 
         @media (min-width:50px) {
             .main {width:80vw;
-                padding: 50px;
+                padding: 5vw;
                 position:absolute;
             }
                 }
@@ -89,19 +76,22 @@
                 @media (min-width:700px) {
                 .main {width:60vw;
                 position:absolute;
-                padding: 50px;
+                padding: 5vw;
             }
                 }
     </style>
 </head>
 
 <body>
+        <div class="main">
+    <p class="headline"> Certificate regulation covers delays in private care home improvements</p>
+
     <cover-image>
+            <img src="images/RCHD_header.png" alt="coverphoto" style="max-width:100%">
 
         </cover-image>
 
-    <div class="main">
-    <p class="headline"> Certificate regulation covers delays in private care home improvements</p>
+    
     <p class="subheadline">Certificate regulation helps puts off required constructions in nursery homes for years and now the homes eventually start to rush for the deadline.</p>
     <p class="byline">by Dorothy Ma, Erica Chin, Sammi Chan</p>
     <br>
