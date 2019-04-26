@@ -8,7 +8,6 @@
                 font-family: 'Lato';
             font-size: 15px;
             font-weight: normal;
-            background-color:rgb(39, 39, 39);
             color:rgb(214, 214, 214);
             }
 
@@ -78,117 +77,186 @@
     max-width: 500px;
     margin: 0 auto;
 }
+
+#container {
+    height: 500px; 
+    min-width: 310px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+.acts {
+  position: relative;
+  width: 50%;
+}
+
+
+.acts:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.sexualacts{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px
+}
         </style>
     </head>
 
     <body>
-            <div class="container">
-        <div class="item1">  
-        <cover-image>
-            <img src="images/SCMP_header.png" alt="coverphoto" style="max-width:100%">
-        <h1>Criticise the Visuals: <br> How every Boeing 737 MAX was grounded in five days</h1>
-        </cover-image>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+        
+        <div id="container"></div>  
+
+        <div class="sexualacts">
+        <div class="acts">
+            <img src="images/sexualviolenceact-01.png" style="max-width:100%" class="image">
+        <div class="overlay">
+            <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
+        </div>
     </div>
 
-        
-            
-            <div class="item2">     </div>
-            <div class="item4">     </div>
-            <div class="item5">     </div>
-            <div class="item3">
-        <h2>Background</h2>
-        <a href="https://multimedia.scmp.com/news/world/article/3003901/boeing-737-grounded/index.html" >Link to original story</a>
-        <p>This is a story by Pablo Robles from the SCMP. Published on 1 April, the story is about how the plane model Boeing 737 Max was grounded by all countries after two crashes of said model in five months. The author illustrated why, when, and where the aircrafts were grounded by utilising various visulisations.</p>
-        <p>In this analysis, I would like to focus on the timeline the author used to depict the chronology.</p>
-        <h2>Pros</h2>
-        <ol>
-        <li>Mobile friendly</li>
-        <video width="200" height="420" controls >
-                <source src="videos/SCMP_375.mp4" type="video/mp4">
-                <source src="videos/SCMP_375.ogg" type="video/ogg">
-              Your browser does not support the video tag.
-              </video>
-              <figcaption>This is how the story reads like on an iPhone X, with the dimension of 375 x 812.</figcaption>
-              <br>
-              <img src="images/SCMP_laptop.png" style="max-width:90%">
-              <figcaption>This is how the story reads like on a computer screen.</figcaption>
-              <p>First, the timeline is easily readable on both computer screens and phone screens. Second, the timeline is vertical, which is more mobile-friendly than a horizontal timeline because people are used to scrolling down their phones instead of scrolling sideways.</p>
-        <li>Shows clear chronological order of the days</li>
-              <p>The timeline shows clearly the day and time of the events, with exact time.</p>
-        </ol>
-        <h2>Cons</h2>
-        <ol>
-        <li>Takes too long to scroll</li>
-        <p>The timeline, in my opinion, requires too much scrolling to inform readers the chronology of the grounding of flights.</p>
-        </ol>
-
-        <h2>My take</h2>
-        <p>I would like to keep the pros which I have mentioned above:
-            <li>Mobile friendly</li>
-            <li>Shows clear chronological order of the days</li>
-            <br>
-            while also improving the cons:
-            <br>
-            <br>
-            <li>Takes too long to scroll</li>
-            <br>
-            This is my attempt:
-        </p>
-                <script src="https://code.highcharts.com/highcharts.js"></script>
-                <script src="https://code.highcharts.com/modules/timeline.js"></script>
-                
-                <div id="mychart"></div>
     
-    <p>I would like to add that this is a very simplified version of my attempt to improve the timeline. Details from the original timeline, for example, the map of Ethopia for the first event, the bubbles which indicates how many planes were grounded should be preserved.</p>
-        <img src="images/SCMP_map.png" style="max-width:50%">
-        <figcaption style="max-width:50%">A map of Ethopia which shows the site of take off and crash of the crashed plane.</figcaption>
-        <img src="images/SCMP_bubble.png" style="max-width:50%">
-        <figcaption style="max-width:50%">Bubbles which shows how many aircrafts were grounded.</figcaption>
-</div>
+        <div class="acts">
+                <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
+            <div class="overlay">
+                <img src="images/sexualviolenceact_pie-02.png" style="max-width:100%" class="image">
+            </div> </div>
 
+            <div class="acts">
+                    <img src="images/sexualviolenceact-03.png" style="max-width:100%" class="image">
+                <div class="overlay">
+                    <img src="images/sexualviolenceact_pie-03.png" style="max-width:100%" class="image">
+                </div> </div>
+
+                <div class="acts">
+                        <img src="images/sexualviolenceact-04.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-04.png" style="max-width:100%" class="image">
+                    </div> </div>
+
+                    <div class="acts">
+                            <img src="images/sexualviolenceact-05.png" style="max-width:100%" class="image">
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-05.png" style="max-width:100%" class="image">
+                        </div> </div>
+
+                        <div class="acts">
+                                <img src="images/sexualviolenceact-06.png" style="max-width:100%" class="image">
+                            <div class="overlay">
+                                <img src="images/sexualviolenceact_pie-06.png" style="max-width:100%" class="image">
+                            </div> </div>
+
+                            <div class="acts">
+                                    <img src="images/sexualviolenceact-07.png" style="max-width:100%" class="image">
+                                <div class="overlay">
+                                    <img src="images/sexualviolenceact_pie-07.png" style="max-width:100%" class="image">
+                                </div> </div>
+                                <div class="acts">
+                                        <img src="images/sexualviolenceact-08.png" style="max-width:100%" class="image">
+                                    <div class="overlay">
+                                        <img src="images/sexualviolenceact_pie-08.png" style="max-width:100%" class="image">
+                                    </div> </div>
+        </div>
+    </div>
     </body>
 
-    <script>
-    Highcharts.chart('mychart', {
-    chart: {
-        type: 'timeline',
-        inverted: true
-    },
-    title: {
-        text: 'Timeline of the grounding of Boeing MAX 737'
-    },
-    subtitle: {
-        text: 'Source: <a href="https://multimedia.scmp.com/news/world/article/3003901/boeing-737-grounded/index.html">SCMP</a>'
-    },
-    xAxis: {
-        visible: false
-    },
-    yAxis: {
-        visible: false
-    },
-    series: [{
-        data: [{
-            name: 'Mar 10: The trigger',
-            label: 'Crash of Ethiopian flight 302',
-            description: 'The aircraft took off in Addis Ababa at 8:38am. Signals of the flight was lost six minutes after take off.'
-        }, {
-            name: 'Day1: Mar 11',
-            label: '115 planes grounded',
-            description: '96 in China, 2 from Cayman Airlines, 1 from MIAT Mongolian, 4 from Ethiopian Airlines, 1 from Royal Air Maroc, 11 from Garuda Indonesia Lion Air'
-        }, {
-            name: 'Day2: Mar 12',
-            label: '84 planes grounded',
-            description: ''
-        }, {
-            name: 'Day3: Mar 13',
-            label: '88 planes grounded',
-            description: ''
-        },{
-            name: 'Day4: Mar 14',
-            label: '59 planes grounded',
-            description: ''
+    <script> 
+// Prepare random data
+var data = [
+    ['CENTRAL & WESTERN', 110],
+    ['SOUTHERN', 19],
+    ['ISLANDS', 25],
+    ['EASTERN', 49],
+    ['WAN CHAI', 58],
+    ['KOWLOON CITY', 66],
+    ['YAU TSIM MONG', 163],
+    ['SHAM SHUI PO', 54],
+    ['WONG TAI SIN', 32],
+    ['SAI KUNG', 20],
+    ['KWUN TONG', 65],
+    ['SHA TIN', 46],
+    ['TAI PO', 28],
+    ['NORTH', 26],
+    ['YUEN LONG', 66],
+    ['TSUEN WAN', 38],
+    ['KWAI TSING', 54],
+    ['TUEN MUN', 39],
+];
+
+$.getJSON('Hong_Kong_18_Districts.geojson', function (geojson) {
+
+    // Initiate the chart
+    Highcharts.mapChart('container', {
+        chart: {
+            map: geojson
+        },
+
+        title: {
+            text: 'Reported sexual violence cases by districts in 2018'
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        colorAxis: {
+            tickPixelInterval: 100
+        },
+
+        series: [{
+            data: data,
+            keys: ['ENAME', 'value'],
+            joinBy: 'ENAME',
+            name: 'Reported cases',
+            states: {
+                hover: {
+                    color: '#a4edba'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.properties.ENAME}'
+            }
         }]
-    }]
-});</script>
+    });
+});
+
+</script>
 
 </html>
