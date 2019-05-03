@@ -1,0 +1,264 @@
+<html>
+    <head>
+        <title>Criticise the Visuals</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                font-family: 'Lato';
+            font-size: 15px;
+            font-weight: normal;
+            background-color:rgb(39, 39, 39);
+            color:rgb(214, 214, 214);
+            }
+
+            cover-image {
+            display: block;
+            position: relative;
+            opacity: 0.9;
+            max-width:100%;
+        
+        }
+
+        cover-image h1 {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            right: 1em;
+            color: rgb(39, 39, 39);
+            text-align: left;
+            font-size: 4vw;
+            font-style: bold;
+        }
+
+        figcaption{
+            font-size: 12px;
+        }
+
+        video{
+            position: relative;
+        }
+
+        li{
+            
+        }
+        h1{
+                font-size: 30px;
+        }
+
+        .item1{grid-area: header;}
+        .item2{grid-area: left;}
+        .item3{grid-area: main;
+        width:100%;}
+        .item4{grid-area: right;}
+        .item5{grid-area: footer;}
+
+            @media (min-width:50px) {
+            .container {
+                display: grid;
+                grid-template-areas:'header header header'
+                'left main right'
+                'footer footer footer' ;
+                padding: 50px;
+            }
+                }
+                
+                @media (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-areas:'header header header header header'
+                'left left main right right'
+                'footer footer footer footer footer' ;
+                padding: 50px;
+            }
+                }
+
+                #mychart {
+    min-width: 360px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#container {
+    height: 500px; 
+    min-width: 310px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+.acts {
+  position: relative;
+  width: 50%;
+}
+
+
+.acts:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.sexualacts{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px
+}
+
+.highcharts-color-{
+    color:[#769A99,#BE1622,#D4DCE1,#3C3C3B]
+}
+
+
+        </style>
+    </head>
+
+    <body>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+        
+        <div id="container"></div>  
+
+        <div class="sexualacts">
+        <div class="acts">
+        <div class="overlay">
+            <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
+        </div>
+    </div>
+    
+        <div class="acts">
+                <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
+            <div class="overlay">
+                <img src="images/sexualviolenceact_pie-02.png" style="max-width:100%" class="image">
+            </div> </div>
+
+            <div class="acts">
+                    <img src="images/sexualviolenceact-03.png" style="max-width:100%" class="image">
+                <div class="overlay">
+                    <img src="images/sexualviolenceact_pie-03.png" style="max-width:100%" class="image">
+                </div> </div>
+
+                <div class="acts">
+                        <img src="images/sexualviolenceact-04.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-04.png" style="max-width:100%" class="image">
+                    </div> </div>
+
+                    <div class="acts">
+                            <img src="images/sexualviolenceact-05.png" style="max-width:100%" class="image">
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-05.png" style="max-width:100%" class="image">
+                        </div> </div>
+
+                        <div class="acts">
+                                <img src="images/sexualviolenceact-06.png" style="max-width:100%" class="image">
+                            <div class="overlay">
+                                <img src="images/sexualviolenceact_pie-06.png" style="max-width:100%" class="image">
+                            </div> </div>
+
+                            <div class="acts">
+                                    <img src="images/sexualviolenceact-07.png" style="max-width:100%" class="image">
+                                <div class="overlay">
+                                    <img src="images/sexualviolenceact_pie-07.png" style="max-width:100%" class="image">
+                                </div> </div>
+                                <div class="acts">
+                                        <img src="images/sexualviolenceact-08.png" style="max-width:100%" class="image">
+                                    <div class="overlay">
+                                        <img src="images/sexualviolenceact_pie-08.png" style="max-width:100%" class="image">
+                                    </div> </div>
+        </div>
+    </div>
+    </body>
+
+    <script> 
+// Prepare random data
+var data = [
+    ['CENTRAL & WESTERN', 110],
+    ['SOUTHERN', 19],
+    ['ISLANDS', 25],
+    ['EASTERN', 49],
+    ['WAN CHAI', 58],
+    ['KOWLOON CITY', 66],
+    ['YAU TSIM MONG', 163],
+    ['SHAM SHUI PO', 54],
+    ['WONG TAI SIN', 32],
+    ['SAI KUNG', 20],
+    ['KWUN TONG', 65],
+    ['SHA TIN', 46],
+    ['TAI PO', 28],
+    ['NORTH', 26],
+    ['YUEN LONG', 66],
+    ['TSUEN WAN', 38],
+    ['KWAI TSING', 54],
+    ['TUEN MUN', 39],
+];
+
+
+
+$.getJSON('Hong_Kong_18_Districts.geojson', function (geojson) {
+
+    // Initiate the chart
+    Highcharts.mapChart('container', {
+        chart: {
+            map: geojson
+        },
+
+        
+
+        plotOptions:{ color:'#769A99,#BE1622, #D4DCE1,#3C3C3B'
+        },
+
+        title: {
+            text: 'Reported sexual violence cases by districts in 2018'
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        colorAxis: {
+            tickPixelInterval: 100,
+            color:'#769A99',
+                },
+
+        series: [{
+            data: data,
+            keys: ['ENAME', 'value'],
+            joinBy: 'ENAME',
+            name: 'Reported cases',
+            states: {
+                hover: {
+                    color: '#a4edba'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.properties.ENAME}'
+            }
+        }]
+    });
+});
+
+</script>
+
+</html>

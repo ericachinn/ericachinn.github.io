@@ -1,264 +1,996 @@
-<html>
-    <head>
-        <title>Criticise the Visuals</title>
-        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body{
-                font-family: 'Lato';
-            font-size: 15px;
-            font-weight: normal;
-            background-color:rgb(39, 39, 39);
-            color:rgb(214, 214, 214);
-            }
+<!DOCTYPE html>
 
-            cover-image {
-            display: block;
-            position: relative;
-            opacity: 0.9;
-            max-width:100%;
-        
-        }
+<html lang="">
 
-        cover-image h1 {
-            position: absolute;
-            bottom: 1em;
-            left: 1em;
-            right: 1em;
-            color: rgb(39, 39, 39);
-            text-align: left;
-            font-size: 4vw;
-            font-style: bold;
-        }
+<head>
+    <title>Sexual Abuse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
 
-        figcaption{
-            font-size: 12px;
-        }
-
-        video{
-            position: relative;
-        }
-
-        li{
-            
-        }
-        h1{
-                font-size: 30px;
-        }
-
-        .item1{grid-area: header;}
-        .item2{grid-area: left;}
-        .item3{grid-area: main;
-        width:100%;}
-        .item4{grid-area: right;}
-        .item5{grid-area: footer;}
-
-            @media (min-width:50px) {
-            .container {
-                display: grid;
-                grid-template-areas:'header header header'
-                'left main right'
-                'footer footer footer' ;
-                padding: 50px;
-            }
-                }
-                
-                @media (min-width:700px) {
-            .container {
-                display: grid;
-                grid-template-areas:'header header header header header'
-                'left left main right right'
-                'footer footer footer footer footer' ;
-                padding: 50px;
-            }
-                }
-
-                #mychart {
-    min-width: 360px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#container {
-    height: 500px; 
-    min-width: 310px; 
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-.loading {
-    margin-top: 10em;
-    text-align: center;
-    color: gray;
-}
-.acts {
-  position: relative;
-  width: 50%;
-}
+<body id="top">
+    <!-- Highcharts -->
+    <script src="../Highcharts-7.0.3/code/highcharts.js"></script>
+    <script src="../Highcharts-7.0.3/code/highcharts-3d.js"></script>
+    <script src="../Highcharts-7.0.3/code/modules/exporting.js"></script>
+    <script src="../Highcharts-7.0.3/code/modules/export-data.js"></script>
 
 
-.acts:hover .overlay {
-  opacity: 1;
-}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-}
+    <!-- Header -->
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+            <div id="logo" class="fl_left">
+                <h1>
+                    <p>Team 2</p>
+                    <p>Erica Chin, Tiffany Ng, Hanyue Sun and Midori Ge <br> 27th April, 2019</p>
+                    </a>
+                </h1>
+            </div>
 
-.sexualacts{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px
-}
+        </header>
+    </div>
 
-.highcharts-color-{
-    color:[#769A99,#BE1622,#D4DCE1,#3C3C3B]
-}
-
-
-        </style>
-    </head>
-
-    <body>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
-        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
-        
-        <div id="container"></div>  
-
-        <div class="sexualacts">
-        <div class="acts">
-        <div class="overlay">
-            <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
+    <!-- Cover -->
+    <div class="wrapper bgded" style="background-image:url('images/coverphoto-01.png');">
+        <div id="pageintro" class="hoc clear">
+            <div class="flexslider basicslider">
+                <ul class="slides">
+                    <li>
+                        <article>
+                            <h3 class="heading">The Muffled Voice</h3>
+                            <p>The plight of sexual violence victims in Hong Kong</p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    
-        <div class="acts">
-                <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
-            <div class="overlay">
-                <img src="images/sexualviolenceact_pie-02.png" style="max-width:100%" class="image">
-            </div> </div>
 
+    <!-- 黑 Background -->
+    <div class="wrapper row3" style="background-color: rgb(39,39,39)">
+        <div style="display:table-cell; vertical-align:middle; margin: auto auto">
+            <b><h6 class="heading" style="color:white">Sexual Violence in Hong Kong</h6></b>
+            <p style="color:white">#MeToo movement is an attempt to demonstrate the widespread prevalence of sexual assault and harassment. The waves of this movement started with a hashtag on social media in 2017. Ever since, more and more women came forward on social media
+                with their shared experiences of sexual harassment.
+            </p>
+        </div>
+    </div>
+
+    <!-- 白 Sex Violence in HK -->
+    <div class="wrapper row3">
+        <section class="hoc container clear">
+            <div class="sectiontitle">
+                <h6 class="heading">Sexual Violence</h6>
+                <p>What is sexual violence?</p>
+            </div>
+            <div class="group">
+                <div class="one_half first">
+
+                    <iframe weigh="1080" height="480" src="https://www.youtube.com/embed/LWctQH4C0P8" style="position:center" frameborder='0' allowfullscreen></iframe>
+                </div>
+
+                <div class="one_half">
+                    <p>Sexual violence refers to the intended offence in action, language or attitude with sexual implications, which make a person feel uncomfortable. </p>
+                    <p>By this definition, sexual violence includes not only to rape and indecent assault, but also sexual abuse without body contact. Examples are sexual harassment, dirty jokes, and sex-oriented comment.
+                    </p>
+                    <p>Sexual violence has nothing to do with the relationship or gender of involved parties. Both male and female can be victims of sexual violence. </p>
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <!-- hk situation -->
+            <div class="sectiontitle">
+                <h6 class="heading">Situations in Hong Kong</h6>
+                <p>According to RainLily, Hong Kong’s first sexual violence crisis centre launched in 2000, the situation of female victims is worrying. </p>
+                <br>
+            </div>
+
+            <div>
+                <!-- increasing -->
+                <h6 class="heading">Increasing number of reported cases of sexual abuse</h6>
+                <p>The number of cases of ‘Rape’, ‘Indecent assault’ and ‘Sexual harassment’ has gone up. Over the past 18 years, the number of ‘Rape’ cases increased from 128 to 446, which is three times the original. </p>
+
+                <div id="RL Trend" style="min-width: 310px; height:400px;margin:0px">
+
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Highcharts Example</title>
+
+                        <style type="text/css">
+
+                        </style>
+                    </head>
+
+                    <body>
+                        <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                        <script type="text/javascript">
+                            Highcharts.setOptions({
+                                colors: ['#BE1622', '#769A99', '#3C3C3B']
+                            });
+
+                            Highcharts.chart('container1', {
+                                chart: {
+                                    type: 'line'
+                                },
+                                title: {
+                                    text: 'Number of cases handled by RainLily per three-year period from 2000 to 2017'
+                                },
+                                subtitle: {
+                                    text: 'Source: RainLily'
+                                },
+                                xAxis: {
+                                    categories: ['2000-2002', '2003-2005', '2006-2008', '2009-2011', '2012-2014', '2015-2017']
+                                },
+                                yAxis: {
+                                    title: {
+                                        text: 'Number of Cases'
+                                    }
+                                },
+                                plotOptions: {
+                                    line: {
+                                        dataLabels: {
+                                            enabled: true
+                                        },
+                                        enableMouseTracking: false
+                                    }
+                                },
+                                series: [{
+                                    name: 'Rape',
+                                    data: [128, 433, 403, 412, 428, 446]
+                                }, {
+                                    name: 'Indecent Assault',
+                                    data: [34, 166, 194, 175, 196, 275]
+                                }, {
+                                    name: 'Sexual Harassment',
+                                    data: [15, 24, 24, 12, 35, 92]
+                                }]
+                            });
+                        </script>
+                    </body>
+                </div>
+                <br><br><br>
+                <!-- district -->
+                <div>
+                    <h6 class="heading">Reported cases by district</h6>
+                    <p>According to the Social Welfare Department, ‘Yau Tsim Mong’ and ‘Central and Western’ are the two districts with the most reported sexual violence cases last year.</p>
+                    <p></p>
+                    <div id="container0" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+                    <br><br><br>
+                    <!-- acquaintances -->
+                    <h6 class="heading">Most of the perpetrators are acquaintances of the victims</h6>
+                    <p>RainLily also found that most perpetrators and victims are acquaintances. Around 80% of victims know the perpetrator prior to the incident, whereas strangers only take up 20% of the perpetrators.
+                    </p>
+
+                    <div id="perpetrator" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+                                #container2 {
+                                    max-width: 660px;
+                                    margin: auto;
+                                    height: 400px;
+                                    margin: 0 auto;
+                                }
+                            </style>
+                        </head>
+
+                        <body>
+                            <div id="container2"></div>
+                            <script type="text/javascript">
+                                var colors = Highcharts.setOptions({
+                                        colors: ['#BE1622', '#769A99', '#3C3C3B']
+                                    }),
+                                    categories = [
+                                        'Acquaintance',
+                                        'Stranger',
+                                        'Others'
+                                    ],
+                                    data = [{
+                                        y: 78.6,
+                                        color: '#769A99',
+                                        drilldown: {
+                                            name: 'Acquaintance',
+                                            categories: [
+                                                'Peer or Friend',
+                                                'Intimate Partner',
+                                                'Work Relationship',
+                                                'Parent, Sibling or Relative',
+                                                'Online Acquaintance',
+                                                'Caregiver (non-related)',
+                                                'Neighbour'
+                                            ],
+                                            data: [
+                                                36.3,
+                                                21.1,
+                                                9.4,
+                                                8.5,
+                                                1.2,
+                                                0.3,
+                                                1.7
+                                            ]
+                                        }
+                                    }, {
+                                        y: 17.5,
+                                        color: '#BE1622',
+                                        drilldown: {
+                                            name: 'Stranger',
+                                            categories: [
+                                                'Stranger'
+                                            ],
+                                            data: [
+                                                17.5
+                                            ]
+                                        }
+                                    }, {
+                                        y: 3.9,
+                                        color: '#3C3C3B',
+                                        drilldown: {
+                                            name: 'Others',
+                                            categories: [
+                                                'Others'
+                                            ],
+                                            data: [
+                                                3.9
+                                            ]
+                                        }
+                                    }],
+                                    browserData = [],
+                                    versionsData = [],
+                                    i,
+                                    j,
+                                    dataLen = data.length,
+                                    drillDataLen,
+                                    brightness;
+
+
+                                // Build the data arrays
+                                for (i = 0; i < dataLen; i += 1) {
+
+                                    // add browser data
+                                    browserData.push({
+                                        name: categories[i],
+                                        y: data[i].y,
+                                        color: data[i].color
+                                    });
+
+                                    // add version data
+                                    drillDataLen = data[i].drilldown.data.length;
+                                    for (j = 0; j < drillDataLen; j += 1) {
+                                        brightness = 0.2 - (j / drillDataLen) / 5;
+                                        versionsData.push({
+                                            name: data[i].drilldown.categories[j],
+                                            y: data[i].drilldown.data[j],
+                                            color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                                        });
+                                    }
+                                }
+
+                                // Create the chart
+                                Highcharts.chart('container2', {
+                                    chart: {
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        text: "Victim-perpetrator Relationship"
+                                    },
+                                    subtitle: {
+                                        text: 'Source: RainLily</a>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            shadow: false,
+                                            center: ['50%', '50%']
+                                        }
+                                    },
+                                    tooltip: {
+                                        valueSuffix: '%'
+                                    },
+                                    series: [{
+                                        name: 'Percentage',
+                                        data: browserData,
+                                        size: '60%',
+                                        dataLabels: {
+                                            formatter: function() {
+                                                return this.y > 5 ? this.point.name : null;
+                                            },
+                                            color: '#ffffff',
+                                            distance: -30
+                                        }
+                                    }, {
+                                        name: 'Percentage',
+                                        data: versionsData,
+                                        size: '80%',
+                                        innerSize: '60%',
+                                        dataLabels: {
+                                            formatter: function() {
+                                                // display only if larger than 1
+                                                return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
+                                                    this.y + '%' : null;
+                                            }
+                                        },
+                                        id: 'versions'
+                                    }],
+                                    responsive: {
+                                        rules: [{
+                                            condition: {
+                                                maxWidth: 400
+                                            },
+                                            chartOptions: {
+                                                series: [{
+                                                    id: 'versions',
+                                                    dataLabels: {
+                                                        enabled: false
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                });
+                            </script>
+                        </body>
+                    </div>
+                    <br><br><br>
+                    <!-- delay report -->
+                    <div>
+                        <h6 class="heading">Teenage girls tend to have longer delay reporting time</h6>
+                        <p>RainLily discovered that female victims have serious and common delay reporting phenomenon among sexual violence victims. A relationship between the length of delay reporting time and the victim’s age exist. On average, females
+                            above 16 reported their cases 444 days after the incident, while females under 16 delayed 4814 days. </p>
+                        <p></p>
+                        <div id="delay reporting" style="min-width: 310px; height:400px;margin:0px">
+
+                            <head>
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Highcharts Example</title>
+
+                                <style type="text/css">
+
+                                </style>
+                            </head>
+
+                            <body>
+
+                                <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+                                <script type="text/javascript">
+                                    Highcharts.setOptions({
+                                        colors: ['#BE1622', '#769A99']
+                                    });
+
+                                    Highcharts.chart('container3', {
+                                        chart: {
+                                            type: 'bar'
+                                        },
+                                        title: {
+                                            text: 'Delay Reporting time: Below 16 VS Above 16'
+                                        },
+                                        xAxis: {
+                                            categories: [
+                                                'Age Group'
+                                            ],
+                                            crosshair: true
+                                        },
+                                        yAxis: {
+                                            min: 0,
+                                            title: {
+                                                text: 'Number of Days (Mean)'
+                                            }
+                                        },
+                                        tooltip: {
+                                            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                                '<td style="padding:0"><b>{point.y} </b></td></tr>',
+                                            footerFormat: '</table>',
+                                            shared: true,
+                                            useHTML: true
+                                        },
+                                        plotOptions: {
+                                            column: {
+                                                pointPadding: 0.2,
+                                                borderWidth: 0
+                                            }
+                                        },
+                                        series: [{
+                                            name: 'Below 16',
+                                            data: [4814]
+
+                                        }, {
+                                            name: 'Above 16',
+                                            data: [444]
+
+                                        }]
+                                    });
+                                </script>
+                            </body>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+
+        <!--黑 Recognition -->
+
+        <style>
+            .acts {
+                position: relative;
+                width: 50%;
+            }
+            
+            .acts:hover .overlay {
+                opacity: 1;
+            }
+            
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+            }
+            
+            .sexualacts {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 20px
+            }
+        </style>
+        <div class="wrapper row3 " style="background-color: rgb(39,39,39)">
+            <section class="hoc container clear ">
+                <!-- ################################################################################################ -->
+                <div class="sectiontitle " style="color:white">
+                    <h6 class="heading" style="color:white">Recognition of sexual violence</h6>
+                    <p style="color:white">99 females aged 15-29 had took part in a quiz with 8 questions on identifying the acts of sexual violation.
+                    </p>
+                </div>
+                <h6 class="heading " style="color:white">Which of the following act would you consider as an act of sexual violation?</h6>
+                <!--<div class="group team ">
             <div class="acts">
-                    <img src="images/sexualviolenceact-03.png" style="max-width:100%" class="image">
-                <div class="overlay">
-                    <img src="images/sexualviolenceact_pie-03.png" style="max-width:100%" class="image">
-                </div> </div>
+                <figure class="one_quarter first ">
+                    <img src="images/sexualviolenceact-01.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
+                    </div>
+                </figure>
 
-                <div class="acts">
-                        <img src="images/sexualviolenceact-04.png" style="max-width:100%" class="image">
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-02.png" style="max-width:100%" class="image">
+                    </div>
+                </figure>
+
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-03.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-03.png" style="max-width:100%" class="image">
+                    </div>
+                </figure>
+
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-04.png" style="max-width:100%" class="image">
                     <div class="overlay">
                         <img src="images/sexualviolenceact_pie-04.png" style="max-width:100%" class="image">
-                    </div> </div>
+                    </div>
+                </figure>
+            </div>-->
+                <div class="sexualacts">
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-01.png" style="max-width:100%" class="image">
+                        <p style="color:white">A stranger touched your privates on the MTR without your permission</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
 
                     <div class="acts">
-                            <img src="images/sexualviolenceact-05.png" style="max-width:100%" class="image">
+                        <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
+                        <p style="color:white">A stranger winked at you and smiled</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-02.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
+
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-03.png" style="max-width:100%" class="image">
+                        <p style="color:white">Your uncle patted your butt and you feel discomfort</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-03.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
+
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-04.png" style="max-width:100%" class="image">
+                        <p style="color:white">Consensual sex</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-04.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
+
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-05.png" style="max-width:100%" class="image">
+                        <p style="color:white">Your boss told you a sexual joke which makes you feel uncomfortable</p>
                         <div class="overlay">
                             <img src="images/sexualviolenceact_pie-05.png" style="max-width:100%" class="image">
-                        </div> </div>
+                        </div>
+                    </div>
 
-                        <div class="acts">
-                                <img src="images/sexualviolenceact-06.png" style="max-width:100%" class="image">
-                            <div class="overlay">
-                                <img src="images/sexualviolenceact_pie-06.png" style="max-width:100%" class="image">
-                            </div> </div>
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-06.png" style="max-width:100%" class="image">
+                        <p style="color:white">Your friend touched your breasts and you feel discomfort</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-06.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
 
-                            <div class="acts">
-                                    <img src="images/sexualviolenceact-07.png" style="max-width:100%" class="image">
-                                <div class="overlay">
-                                    <img src="images/sexualviolenceact_pie-07.png" style="max-width:100%" class="image">
-                                </div> </div>
-                                <div class="acts">
-                                        <img src="images/sexualviolenceact-08.png" style="max-width:100%" class="image">
-                                    <div class="overlay">
-                                        <img src="images/sexualviolenceact_pie-08.png" style="max-width:100%" class="image">
-                                    </div> </div>
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-07.png" style="max-width:100%" class="image">
+                        <p style="color:white">Your classmate asked about the size of your breasts which makes you feel uncomfortable</p><div class="overlay">
+                            <img src="images/sexualviolenceact_pie-07.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
+                    <div class="acts">
+                        <img src="images/sexualviolenceact-08.png" style="max-width:100%" class="image">
+                        <p style="color:white">Your intimate partner forced you to have sex with them even though you said no</p>
+                        <div class="overlay">
+                            <img src="images/sexualviolenceact_pie-08.png" style="max-width:100%" class="image">
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <!--<div class="group team ">
+                <figure class="one_quarter first ">
+                    <img src="images/sexualviolenceact-05.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-05.png" style="max-width:100%" class="image">
+                    </div>
+
+                </figure>
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-06.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-06.png" style="max-width:100%" class="image">
+                    </div>
+
+                </figure>
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-07.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-07.png" style="max-width:100%" class="image">
+                    </div>
+                </figure>
+
+                <figure class="one_quarter ">
+                    <img src="images/sexualviolenceact-08.png" style="max-width:100%" class="image">
+                    <div class="overlay">
+                        <img src="images/sexualviolenceact_pie-08.png" style="max-width:100%" class="image">
+                    </div>
+                </figure>
+
+            </div>-->
+                <div class="clear "></div>
+                <br><br>
+                <div>
+                    <h6 class="heading" style="color:white">Misconceptions of sexual violations</h6>
+                    <li style="color:white">Concensual sex: two-thirds of the respondents mistakenly believe that consensual sex is a form of sexual violation</li>
+                    <li style="color:white">Uncomfortable about being asked for the size of breasts: only 55 out of 99 respondents noticed that this is a form of sexual violation despite there is no phsyical contact.</li>
+                    <li style="color:white">Forced sex by partner: around 10% of the respondents did not notice that forced sex of their partners can be a form of sexual violence</li>
+                    <li style="color:white">Being winked at by a stranger: This is not a form of sexual violence, but 11 of the respondents did not believe so</li>
+                </div>
+
+                <br><br>
+                <div>
+                    <h6 class="heading" style="color:white">The awareness of sexual assaults</h6>
+                    <p style="color:white">Hong Kong young female adults are aware of different forms of sexual violations. 77 of the respondents have scored from 6 to 8 out of 8. Around one-third got 7 out of 8. Those whose scores are from 1-5 out of 8 only takes up a very
+                        small percentage of the respondents. However, only 13 female got all the correct answers. There are still rooms of improvement in sex education.
+                    </p>
+                </div>
+
+
+
+
+                <div id="correct counts" style="min-width: 310px; height:400px;margin:0px">
+
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Highcharts Example</title>
+
+                        <style type="text/css">
+
+                        </style>
+                    </head>
+
+                    <body>
+
+                        <div id="container4" style="height: 400px"></div>
+
+
+                        <script type="text/javascript">
+                            Highcharts.setOptions({
+                                colors: ['#023E5C', '#769A99', '#25594B', '#455C02', '#3C3C3B', '#778CA6', '#3A93B3', '#5C4802']
+                            });
+
+                            Highcharts.chart('container4', {
+                                chart: {
+                                    type: 'pie',
+                                    options3d: {
+                                        enabled: true,
+                                        alpha: 45
+                                    }
+                                },
+                                title: {
+                                    text: 'Sexual Assault Awareness'
+                                },
+                                subtitle: {
+                                    text: 'Numbers of Correct Answers in 8 Questions about Sexual Violation'
+                                },
+                                plotOptions: {
+                                    pie: {
+                                        innerSize: 100,
+                                        depth: 45
+                                    }
+                                },
+                                series: [{
+                                    name: 'Head counts',
+                                    data: [
+                                        ['8 (100%)', 13],
+                                        ['7 (87.5%)', 34],
+                                        ['6 (75%)', 30],
+                                        ['5 (62.5%)', 11],
+                                        ['4 (50%)', 7],
+                                        ['3 (37.5%)', 3],
+                                        ['2 (25%)', 0],
+                                        ['1 (12.5%)', 1],
+                                        ['0 (0%)', 0]
+                                    ]
+                                }]
+                            });
+                        </script>
+                    </body>
+
+
+
+                </div>
+            </section>
         </div>
-    </div>
-    </body>
 
-    <script> 
-// Prepare random data
-var data = [
-    ['CENTRAL & WESTERN', 110],
-    ['SOUTHERN', 19],
-    ['ISLANDS', 25],
-    ['EASTERN', 49],
-    ['WAN CHAI', 58],
-    ['KOWLOON CITY', 66],
-    ['YAU TSIM MONG', 163],
-    ['SHAM SHUI PO', 54],
-    ['WONG TAI SIN', 32],
-    ['SAI KUNG', 20],
-    ['KWUN TONG', 65],
-    ['SHA TIN', 46],
-    ['TAI PO', 28],
-    ['NORTH', 26],
-    ['YUEN LONG', 66],
-    ['TSUEN WAN', 38],
-    ['KWAI TSING', 54],
-    ['TUEN MUN', 39],
-];
+        <!-- 白 Female voices and silence? -->
+        <div class="wrapper row3">
+            <div class="sectiontitle">
+                <h6 class="heading">Reaction towards sexual violence</h6>
+                <p>How will females respond to sexual violence?</p>
+            </div>
+            <div>
+                <h6 class="heading">Higher tolerance for acquaintances</h6>
+                <p>The respondents may not report their cases to the police if they are sexually violated. Only 18% of the respondents will report to the police if they are sexually violated. The majority, 81% of the respondents, indicates that other factors
+                    may affect their decision on whether to report to the police. Among those who consider other factors, if they are sexually violated by someone they know, only half of them choose to report to the police.</p>
+            </div>
+
+            <div id="depends5" class="ft_middle" style="min-width: 310px; height:400px;margin:0px">
+                <figure><img src="images/pie.png" alt="" style="vertical-align: center"></figure>
+            </div>
+        </div>
+
+        <!-- 黑 Sex education in Hong Kong -->
+        <div class="wrapper row3 " style="background-color:rgb(39,39,39)">
+            <div class="sectiontitle ">
+                <h6 class="heading " style="color:white">Sex education in Hong Kong</h6>
+                <p style="color:white">The ideal VS reality</p>
+            </div>
+
+            <div>
+                <h6 class="heading"style="color:white">Age of receiving sexual education</h6>
+                <p style="color:white">Most of the female respondents wish that they received sex education earlier. Most of the respondents received sex education between the age of 6 to 12 and 13 to 15. However, nearly 70% of all respondents wish that sex education was provided
+                    when they were under six years old.</p>
+            </div>
+
+            <div id="ideal age" style="min-width: 310px; height:400px;margin:0px">
+
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <title>Highcharts Example</title>
+
+                    <style type="text/css">
+
+                    </style>
+                </head>
+
+                <body>
+
+                    <div id="container7" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+                    <script type="text/javascript">
+                        Highcharts.setOptions({
+                            colors: ['#BE1622', '#769A99', '#D4DCE1', '#3C3C3B']
+                        });
+
+                        Highcharts.chart('container7', {
+                            chart: {
+                                type: 'bar'
+                            },
+                            title: {
+                                text: 'Perception on Age of Receiving Sex Education'
+                            },
+                            xAxis: {
+                                categories: ['Reality', 'Ideal', '13-15', '16-18'],
+                                title: {
+                                    text: "Comparison"
+                                }
+                            },
+                            yAxis: {
+                                min: 0,
+                                title: {
+                                    text: 'Age of Receiving Sex Education'
+                                }
+                            },
+                            legend: {
+                                reversed: true
+                            },
+                            plotOptions: {
+                                series: {
+                                    stacking: 'normal'
+                                }
+                            },
+                            series: [{
+                                name: 'Under 6',
+                                data: [21, 68]
+                            }, {
+                                name: '6-12',
+                                data: [41, 27]
+                            }, {
+                                name: '13-15',
+                                data: [31, 2]
+                            }, {
+                                name: '16-18',
+                                data: [6, 2]
+                            }]
+                        });
+                    </script>
+                </body>
+
+            </div>
+
+        </div>
+
+
+        <!-- 白 Seeking help -->
+
+        <div class="wrapper row3 ">
+            <div class="sectiontitle ">
+                <h6 class="heading ">Seeking help</h6>
+                <p>The problem is that female victims may not seek out if they are sexually violated.</p>
+                <p>More family education on sex may be needed. School should also strengthen students' understanding on certain types of sexual violence.</p>
+            </div>
+
+            <div>
+                <h6 class="heading ">The relationship between age and the source of sex education</h6>
+                <p>Most of the female respondents wish that they received sex education earlier. Most of the respondents received sex education between the age of 6 to 12 and 13 to 15. However, nearly 70% of all respondents wish that sex education was provided
+                    when they were under six years old.</p>
+            </div>
+
+            <div>
+
+                <div>
+                    <h6 class="heading ">The relationship between age and the source of sex education</h6>
+                    <p>Most of the female respondents wish that they received sex education earlier. Most of the respondents received sex education between the age of 6 to 12 and 13 to 15. However, nearly 70% of all respondents wish that sex education was
+                        provided when they were under six years old.
+                    </p>
+                </div>
+
+                <div id="age source" style="min-width: 310px; height:400px;margin:0px">
+
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Highcharts Example</title>
+
+                        <style type="text/css">
+
+                        </style>
+                    </head>
+
+                    <body>
+
+
+                        <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 
 
 
-$.getJSON('Hong_Kong_18_Districts.geojson', function (geojson) {
+                        <script type="text/javascript">
+                            Highcharts.setOptions({
+                                colors: ['#BE1622', '#769A99', '#D4DCE1', '#3C3C3B']
+                            });
+                            Highcharts.chart('container', {
+                                chart: {
+                                    type: 'bar'
+                                },
+                                title: {
+                                    text: 'Age & Source of Sex Edu'
+                                },
+                                xAxis: {
+                                    categories: ['Under 6', '6-12', '13-15', '16-18'],
+                                    title: {
+                                        text: "Age of Receiving Sex Education"
+                                    }
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Source of Sex Education'
+                                    }
+                                },
+                                legend: {
+                                    reversed: true
+                                },
+                                plotOptions: {
+                                    series: {
+                                        stacking: 'normal'
+                                    }
+                                },
+                                series: [{
+                                    name: 'Family',
+                                    data: [1, 1, 1, 1]
+                                }, {
+                                    name: 'Family & School',
+                                    data: [21, 22, 2, 2]
+                                }, {
+                                    name: 'School',
+                                    data: [0, 17, 24, 2]
+                                }, {
+                                    name: 'Others',
+                                    data: [0, 1, 4, 1]
+                                }]
+                            });
+                        </script>
+                    </body>
 
-    // Initiate the chart
-    Highcharts.mapChart('container', {
-        chart: {
-            map: geojson
-        },
 
-        
+                </div>
 
-        plotOptions:{ color:'#769A99,#BE1622, #D4DCE1,#3C3C3B'
-        },
+                <div>
+                    <p>Given that family and school are the most importance source of sex education, these two parties should continue doing their best, as well as consider new means to ease the girls' worries.</p>
+                    <p>Meanwhile, the government and NGOs can also work more on the promotion of sex education. They have potential in making positive influence on sex education, but not many respondents notice these two sources.</p>
+                </div>
+            </div>
+        </div>
 
-        title: {
-            text: 'Reported sexual violence cases by districts in 2018'
-        },
+        <!-- 黑 Related articles -->
+        <div class="wrapper bgded overlay " style="background-color: rgb(39,39,39)">
+            <div class="sectiontitle ">
+                <h6 class="heading " font-color:white>Related news</h6>
+            </div>
+            <main class="hoc container clear ">
+                <!-- main body -->
+                <!-- ################################################################################################ -->
+                <ul class="nospace group services ">
+                    <li class="one_third first ">
+                        <article>
+                            <img class="card-img-top " src="images/women.jpeg " alt="Card_1 image cap ">
+                            <h6 class="heading ">The women helping Hong Kong victims of sexual abuse fight back</h6>
+                            <footer>
+                                <a class="btn " href="https://www.scmp.com/news/hong-kong/community/article/2120683/women-helping-hong-kong-victims-sexual-abuse-fight-back " ">Read More &raquo;</a>
+            </footer>
+            </article>
+            </li>
+            <li class="one_third ">
+                <article>
 
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
+                    <img class="card-img-top " src="images/sexed.jpg " alt="Card_3 image cap ">
+                    <h6 class="heading ">Why sex ed plays a role in the fight against sexual violence</h6>
+                    <footer><a class="btn " href="https://ottawacitizen.com/news/local-news/how-does-sex-ed-prevent-sexual-violence-later-in-life ">Read More &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third ">
+                <article>
+                    <img class="card-img-top " src="images/wear.png " alt="Card_2 image cap ">
+                    <h6 class="heading ">What Were You Wearing?</h6>
+                    <footer><a class="btn " href="https://ohiotoday.org/fall-2018/what-were-you-wearing/ ">Read More &raquo;</a></footer>
+                </article>
+            </li>
+            </ul>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear "></div>
+            </main>
+        </div>
+        <br><br>
 
-        colorAxis: {
-            tickPixelInterval: 100,
-            color:'#769A99',
+        <div class="wrapper row5 ">
+            <div id="copyright " class="hoc clear ">
+                <!-- ################################################################################################ -->
+                <p class="fl_left ">JOUR2106 Data Visuation 
+                </p>
+                <p><a href="https://docs.google.com/spreadsheets/d/1hV3jPldrG3UDQTNDalhT7gTBxTR3wk-42tYyjMXIQcs/edit?usp=sharing ">Data</a></p>
+                <!-- ################################################################################################ -->
+            </div>
+        </div>
+        <!-- ################################################################################################ -->
+        <a id="backtotop " href="#top "><i class="fa fa-chevron-up "></i></a>
+        <!-- JAVASCRIPTS -->
+        <script src="layout/scripts/jquery.min.js "></script>
+        <script src="layout/scripts/jquery.backtotop.js "></script>
+        <script src="layout/scripts/jquery.mobilemenu.js "></script>
+        <script src="layout/scripts/jquery.flexslider-min.js "></script>
+</body>
+
+<script>
+        // Prepare random data
+        var data = [
+            ['CENTRAL & WESTERN', 110],
+            ['SOUTHERN', 19],
+            ['ISLANDS', 25],
+            ['EASTERN', 49],
+            ['WAN CHAI', 58],
+            ['KOWLOON CITY', 66],
+            ['YAU TSIM MONG', 163],
+            ['SHAM SHUI PO', 54],
+            ['WONG TAI SIN', 32],
+            ['SAI KUNG', 20],
+            ['KWUN TONG', 65],
+            ['SHA TIN', 46],
+            ['TAI PO', 28],
+            ['NORTH', 26],
+            ['YUEN LONG', 66],
+            ['TSUEN WAN', 38],
+            ['KWAI TSING', 54],
+            ['TUEN MUN', 39],
+        ];
+        $.getJSON('Hong_Kong_18_Districts.geojson', function(geojson) {
+            // Initiate the chart
+            Highcharts.mapChart('container', {
+                chart: {
+                    map: geojson
                 },
-
-        series: [{
-            data: data,
-            keys: ['ENAME', 'value'],
-            joinBy: 'ENAME',
-            name: 'Reported cases',
-            states: {
-                hover: {
-                    color: '#a4edba'
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.properties.ENAME}'
-            }
-        }]
-    });
-});
-
-</script>
+                title: {
+                    text: 'Reported sexual violence cases by districts in 2018'
+                },
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
+                    }
+                },
+                colorAxis: {
+                    tickPixelInterval: 100
+                },
+                series: [{
+                    data: data,
+                    keys: ['ENAME', 'value'],
+                    joinBy: 'ENAME',
+                    name: 'Reported cases',
+                    states: {
+                        hover: {
+                            color: '#a4edba'
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.properties.ENAME}'
+                    }
+                }]
+            });
+        });
+    </script>
 
 </html>
