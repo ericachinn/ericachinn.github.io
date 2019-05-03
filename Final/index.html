@@ -164,11 +164,10 @@
                     <h6 class="heading">Reported cases by district</h6>
                     <p>According to the Social Welfare Department, ‘Yau Tsim Mong’ and ‘Central and Western’ are the two districts with the most reported sexual violence cases last year.</p>
                     <p></p>
-                    <div id="container0" style="min-width: 310px; height: 400px; margin:0"></div>
                     <script type="text/javascript">
                         d3.selecct(self.frameElement).style("height", "800")
                     </script>
-                    <iframe src="http://tiffanynys.github.io/problem/maponly" min-width="310px" max-height="800px" frameborder="0" ;></iframe>
+                    <iframe src="http://tiffanynys.github.io/problem/maponly" min-width="600px" height="500px" frameborder="0" ;></iframe>
                     <br><br><br>
 
                     <!-- acquaintances -->
@@ -434,7 +433,7 @@
         <style>
             .acts {
                 position: relative;
-                width: 50%;
+                width: 90%;
             }
             
             .acts:hover .overlay {
@@ -453,11 +452,32 @@
                 transition: .5s ease;
             }
             
+            @media (min-width:1px) {
+            .sexualacts {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding:1em;
+            }
+            }
+
+            @media (min-width:300px) {
+            .sexualacts {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding:1em;
+            }
+            }
+
+            @media (min-width:600px) {
             .sexualacts {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-gap: 5px
+                padding:1em;
             }
+            }
+
+
+
         </style>
         <div class="wrapper row3 " style="background-color: rgb(39,39,39)">
             <section class="hoc container clear ">
