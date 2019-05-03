@@ -8,6 +8,7 @@
                 font-family: 'Lato';
             font-size: 15px;
             font-weight: normal;
+            background-color:rgb(39, 39, 39);
             color:rgb(214, 214, 214);
             }
 
@@ -84,6 +85,7 @@
     max-width: 800px; 
     margin: 0 auto; 
 }
+
 .loading {
     margin-top: 10em;
     text-align: center;
@@ -111,23 +113,17 @@
   transition: .5s ease;
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .sexualacts{
     display:grid;
     grid-template-columns: auto auto;
     grid-gap: 20px
 }
+
+.highcharts-color-{
+    color:[#769A99,#BE1622,#D4DCE1,#3C3C3B]
+}
+
+
         </style>
     </head>
 
@@ -142,12 +138,10 @@
 
         <div class="sexualacts">
         <div class="acts">
-            <img src="images/sexualviolenceact-01.png" style="max-width:100%" class="image">
         <div class="overlay">
             <img src="images/sexualviolenceact_pie-01.png" style="max-width:100%" class="image">
         </div>
     </div>
-
     
         <div class="acts">
                 <img src="images/sexualviolenceact-02.png" style="max-width:100%" class="image">
@@ -216,12 +210,19 @@ var data = [
     ['TUEN MUN', 39],
 ];
 
+
+
 $.getJSON('Hong_Kong_18_Districts.geojson', function (geojson) {
 
     // Initiate the chart
     Highcharts.mapChart('container', {
         chart: {
             map: geojson
+        },
+
+        
+
+        plotOptions:{ color:'#769A99,#BE1622, #D4DCE1,#3C3C3B'
         },
 
         title: {
@@ -236,8 +237,9 @@ $.getJSON('Hong_Kong_18_Districts.geojson', function (geojson) {
         },
 
         colorAxis: {
-            tickPixelInterval: 100
-        },
+            tickPixelInterval: 100,
+            color:'#769A99',
+                },
 
         series: [{
             data: data,
