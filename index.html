@@ -1,22 +1,20 @@
 <html>
     <head>
             <title>Erica Chin</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
          <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
          <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, initial-scale=1">
          <link rel="stylesheet" href="animate.min.css">
     <style>
 .topnav {
     overflow: hidden;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: white;
 }
 
 .topnav a {
   float: left;
-  color: white;
+  color: rgb(43,43,43);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,7 +23,7 @@
 }
 
 .topnav a:hover {
-  color: rgb(255, 217, 0);
+  color: rgb(119, 105, 80);
 }
 
 * {box-sizing: border-box}
@@ -35,21 +33,21 @@ img {vertical-align: middle;
 border-radius:5px}
 
 .slideshow-container {
-  max-width: 80%;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
 
 .prev, .next {
-  cursor: pointer;
+  cursor:pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 10px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -61,7 +59,7 @@ border-radius:5px}
 }
 
 .prev:hover, .next:hover {
-  color: rgb(255, 217, 0);
+  color: rgb(119, 105, 80);
 }
 
 .text {
@@ -77,9 +75,9 @@ border-radius:5px}
 
 .dot {
   cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 0 2px;
+  height: 4px;
+  width: 4px;
+  margin: 4px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -87,7 +85,7 @@ border-radius:5px}
 }
 
 .active, .dot:hover {
-  background-color: rgb(255, 217, 0);
+  background-color: rgb(119, 105, 80);
 }
 
 .fade {
@@ -112,8 +110,8 @@ border-radius:5px}
 }
 
         body {
-            font-family: 'Lato';font-size: 15px; font-weight: normal;
-            background-color:rgb(43,43,43);
+            font-family: 'Lato';font-size: 14px; font-weight: normal;
+            background-color:white;
 }
          /*.headshot {
             background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/%E9%8C%A2%E7%9A%93%E6%A5%A0.jpg);
@@ -126,7 +124,7 @@ border-radius:5px}
         }*/
         
         mark{
-            background-color:rgb(255, 217, 0);
+            background-color:rgb(119, 105, 80);
             color: rgb(43,43,43);
         }    
 
@@ -188,7 +186,7 @@ border-radius:5px}
     .photo {
             min-width: 100px;
             min-height: 100px;
-            background-color: rgb(255, 217, 0);
+            background-color: rgb(119, 105, 80);
             margin: 5px;
                 } 
 
@@ -202,27 +200,22 @@ border-radius:5px}
                 } 
 
                 @media (min-width:1px) {
-            .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding:1em;
+            .slideshow-container {
+              width:100%;
             }
    }
 
 
    @media (min-width:100px) {
-            .container {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                padding:1em;
+            .slideshow-container {
+              width:100%;
+               
             }
    }
                 
     @media (min-width:700px){
-                    .container{
-                        display: grid;
-                        grid-template-columns:1fr 1fr 1fr;
-                        padding:1em;
+                    .slideshow-container{
+                       width:80%;
                     }
                 }
 
@@ -235,9 +228,10 @@ border-radius:5px}
 
     <body>
             <div class="topnav">
-            <a href="#home" class="animated bounce">Erica Chin | 錢皓楠</a>
-  <a href="#news">About</a>
-  <a href="#contact">Contact</a>
+            <a href="#home">Erica Chin | 錢皓楠</a>
+            <a href="#contact" style="float: right">Contact</a>
+            <a href="#work" style="float: right">Work</a>
+            <a href="#about" style="float: right">About</a>
 </div>
 
 <div class="slideshow-container">
@@ -275,29 +269,6 @@ border-radius:5px}
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
-
-<h1 >Erica Chin | 錢皓楠</h1>
-
-<a href="hw1/index.html"> This is one of my previous work</a>
-
-<h2>Experience</h2>
-<div class="container"> 
-  <div class="grid-item">
-    Photography assistant<br>
-    Petits Studio
-  </div>
-  <div class="grid-item">
-    Editorial intern (Video)<br>
-    Transitions Online, Prague
-    </div>
-  <div class="grid-item">
-    Art Director<br>
-    The Young Reporter
-  </div>
-  <div class="grid-item">
-    Reporter<br>
-    The Young Reporter
-  </div>
 </div>
 </body>
 
