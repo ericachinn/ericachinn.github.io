@@ -18,7 +18,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 15px;
   font-weight:bold;
 }
 
@@ -206,35 +206,49 @@ border-radius:5px}
    }
 
 
+.grid-container{ 
+  overflow: hidden;
+  margin:0 auto;
+  width:800px;
+  height:800px;
+  display: grid;
+  grid-gap:100px;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+  overflow: hidden;
+  font-size: 30px;
+  width:80%;
+  height:80%;
+  padding: 80px;
+  text-align: center;
+  float:center;
+  color:black;
+}
+
    @media (min-width:100px) {
-            .slideshow-container {
-              width:100%;
+          
                
             }
    }
                 
     @media (min-width:700px){
-                    .slideshow-container{
-                       width:80%;
+                    
                     }
-                }
-
-                .grid-item{
-                  color:white;
-                  padding:1em;
                 }
     </style>
 </head>
 
     <body>
-            <div class="topnav">
+         <div class="topnav">
             <a href="#home">Erica Chin | 錢皓楠</a>
             <a href="#contact" style="float: right">Contact</a>
             <a href="#work" style="float: right">Work</a>
             <a href="#about" style="float: right">About</a>
 </div>
 
-<div class="slideshow-container">
+<!--<div class="slideshow-container">
         <div class="mySlides fade">
   <img src="images/DSC01514.jpg" style="width:100%">
   <div class="text"></div>
@@ -269,7 +283,20 @@ border-radius:5px}
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
+</div>-->
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>  
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>  
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
 </div>
+
 </body>
 
 
