@@ -23,106 +23,17 @@
 }
 
 .topnav a:hover {
-  color: rgb(119, 105, 80);
-}
-
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;
-border-radius:5px}
-
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor:pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 10px;
-  margin-top: -22px;
   color: white;
-  font-weight: bold;
-  font-size: 12px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  color: rgb(119, 105, 80);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-.dot {
-  cursor: pointer;
-  height: 4px;
-  width: 4px;
-  margin: 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
   background-color: rgb(119, 105, 80);
+  border-radius: 3px;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
 
         body {
             font-family: 'Lato';font-size: 14px; font-weight: normal;
             background-color:white;
 }
-         /*.headshot {
-            background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/%E9%8C%A2%E7%9A%93%E6%A5%A0.jpg);
-            background-size: cover;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }*/
-        
+    
         mark{
             background-color:rgb(119, 105, 80);
             color: rgb(43,43,43);
@@ -131,35 +42,6 @@ border-radius:5px}
 .p {
 
 }
-        
-        /*@media (min-width: 600px) {
-            #begin {
-                display: grid;
-                grid-template-columns: "2fr 1fr";
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-               /* "hs p1"
-                "hs p2";
-            }*/
-
-        /* @media (min-width: 800px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-                /* "p1 hs p2";
-            }
-            .headshot {
-                grid-area: hs;
-            }
-            .profile1 {
-                grid-area: p1;
-            }
-            .profile2 {
-                grid-area: p2;
-            }
-        }*/
         
 
         h1 {
@@ -182,49 +64,22 @@ border-radius:5px}
             margin-left: 5px;
         }
 
-        
-    .photo {
-            min-width: 100px;
-            min-height: 100px;
-            background-color: rgb(119, 105, 80);
-            margin: 5px;
-                } 
-
-     .photo1 {
-            min-width: 100px;
-            min-height: 100px;
-            background: url(https://raw.githubusercontent.com/ericachinn/ericachinn.github.io/master/images/IMG_0855.JPG);
-            background-size:cover;
-            background-position:center;
-            margin: 5px;
-                } 
-
-                @media (min-width:1px) {
-            .slideshow-container {
-              width:100%;
-            }
-   }
-
 
 .grid-container{ 
   overflow: hidden;
   margin:0 auto;
-  width:800px;
-  height:800px;
+  width:1000px;
+  height:1000px;
   display: grid;
-  grid-gap:100px;
+  grid-gap:50px;
+  padding:10px;
   grid-template-columns: auto auto auto;
 }
 
 .grid-item{
   overflow: hidden;
-  font-size: 30px;
-  width:80%;
-  height:80%;
-  padding: 80px;
   text-align: center;
   float:center;
-  color:black;
 }
 
    @media (min-width:100px) {
@@ -248,85 +103,42 @@ border-radius:5px}
             <a href="#about" style="float: right">About</a>
 </div>
 
-<!--<div class="slideshow-container">
-        <div class="mySlides fade">
-  <img src="images/DSC01514.jpg" style="width:100%">
-  <div class="text"></div>
-</div>
-
-
-<div class="mySlides fade">
-  <img src="images/IMG_0855.JPG" style="width:100%">
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade">
-  <img src="images/IMG_0890.JPG" style="width:100%">
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade">
-  <img src="images/IMG_0898.JPG" style="width:100%">
-  <div class="text"></div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-</div>
-</div>-->
-
 <div class="grid-container">
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>  
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>  
-    <div class="grid-item">7</div>
-    <div class="grid-item">8</div>
-    <div class="grid-item">9</div>
+    <div class="grid-item">
+      <img src="images/DSC01514.jpg" style="width:100%">
+    </div>
+    <div class="grid-item">
+        <img src="images/DSC01514.jpg" style="width:100%">
+    </div>
+    <div class="grid-item">
+        <img src="images/DSC01514.jpg" style="width:100%">
+    </div> 
+    <div class="grid-item">
+        <img src="images/DSC01514.jpg" style="width:100%">
+      </div>
+      <div class="grid-item">
+          <img src="images/DSC01514.jpg" style="width:100%">
+      </div>
+      <div class="grid-item">
+          <img src="images/DSC01514.jpg" style="width:100%">
+      </div> 
+      <div class="grid-item">
+          <img src="images/DSC01514.jpg" style="width:100%">
+        </div>
+        <div class="grid-item">
+            <img src="images/DSC01514.jpg" style="width:100%">
+        </div>
+        <div class="grid-item">
+            <img src="images/DSC01514.jpg" style="width:100%">
+        </div> 
+    
 </div>
 
 </body>
 
 
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
 </script>      
       
             
